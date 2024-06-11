@@ -1,0 +1,26 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 11 jun 2024, 12:30:52 a. m.
+    Author     : kapau
+*/
+
+#contenedorTitulo{
+    text-align: center;
+    color: mediumaquamarine;
+}
+
+.parrafoSecundario {
+    font-size: 18px;
+    color: chocolate;
+}
+
+.notaImportante {
+    color: red;
+}
+
+h1, h2, h3 {
+    color: blueviolet
+}
