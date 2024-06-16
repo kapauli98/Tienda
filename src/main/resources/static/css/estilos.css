@@ -1,17 +1,12 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 11 jun 2024, 12:30:52 a. m.
-    Author     : kapau
-*/
 
+/*UN ID*/
 #contenedorTitulo{
     text-align: center;
     color: mediumaquamarine;
+
 }
 
+/*UNA CLASE*/
 .parrafoSecundario {
     font-size: 18px;
     color: chocolate;
@@ -23,4 +18,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 h1, h2, h3 {
     color: blueviolet
+}
+
+/*SEMANA 3*/
+/*USO DE SPAN*/
+
+p span{
+    color:fuchsia;
+}
+/*PUEDE SER AUN MAS ESPECIFICO*/
+/*TODOS LOS PARRAFOS CON UN span y con texto importante*/
+p span#textoimportante{
+    color:  blueviolet;
+}
+/*Span PUEDE SER AUN MAS COMPLICADO Y ESPECIFICO*/
+/*para que aplique tiene que ser un ancla, dentro de un boton, dentro de un div que tenga la clase review*/
+div.Review button a{
+    font-size: 16px;
+}
+
+/*MEDIDAS*/
+/*COLORES*/
+
+/*MODELO DE CAJAS*/
+/*COMO SE VEN LOS ELEMENTOS RESPECTO A OTROS ELEMENTOS Y RESPECTO A EL MISMO*/
+#contenedorTitulo{
+    border: 2px solid;
+    /*PADDING ES EL ESPACIO ENTRE EL CONTENIDO Y EL BORDE*/
+    padding: 0px;
+    /*MARGEN DISTANCIA DE LO QUE ESTA FUERA CON EL BORDE*/
+    margin-bottom: 100px;
+    margin-top: 0px;
 }
