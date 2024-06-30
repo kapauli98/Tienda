@@ -11,21 +11,120 @@
             }
         </style>
     </head>
+    <!--    <body>
+            <div id="contenedorTitulo">  contenedores que llevan mismo estilo 
+                <h1>Home</h1>  style = aplicar estilos CSS
+                <p>Hola! Esta es mi tienda en linea!</p>  parrafos 
+            </div>
+            <div style="border: 2px solid; margin: 20px 50 px 80px 100px;">  primer valor va arriba y abajo, segundo valor va izq y drcha 
+                <p name="parrafo1" class="parrafoSecundario notaImportante" style="text-align:left;">Lorem ipsum dolor sit amet consectetur adipiscing, elit proin porttitor malesuada ad tincidunt, vehicula dapibus fringilla nostra duis. Senectus interdum primis vivamus cubilia sagittis nunc netus pretium, curae montes aliquam nisl potenti nibh egestas morbi pharetra, litora venenatis vitae nullam id nascetur habitasse. Primis lobortis pellentesque curae ut euismod tortor nam class suspendisse, turpis sapien neque proin et viverra nulla potenti feugiat, tristique placerat tellus rutrum duis congue mollis fermentum.</p>
+                <p name="parrafo1" class="parrafoSecundario" style="text-align: center;">Sagittis faucibus arcu laoreet dignissim sociis non metus dictumst lectus sapien molestie ultrices, cras donec pellentesque sed quis litora ligula parturient mi diam pharetra. Quis erat at nibh malesuada dis etiam varius justo, vivamus aptent dictumst volutpat condimentum vestibulum pretium. Egestas non etiam velit potenti pulvinar gravida erat, curabitur scelerisque neque nisi commodo urna, cursus aenean natoque habitant platea nunc.</p>
+                <p name="parrafo1" style="text-align: right;">Sagittis faucibus arcu <span id="textoimportante">laoreet dignissim sociis non </span>metus dictumst lectus sapien <span>molestie ultrices, cras donec </span>pellentesque sed quis litora ligula parturient mi diam pharetra. Quis erat at nibh malesuada dis etiam varius justo, vivamus aptent dictumst volutpat condimentum vestibulum pretium. Egestas non etiam velit potenti pulvinar gravida erat, curabitur scelerisque neque nisi commodo urna, cursus aenean natoque habitant platea nunc.</p>
+            </div>
+            <br> salto de linea  
+            para hacer comentarios = ctrl + shift + c
+            <p>Ultima linea</p>
+    
+        </body>-->
     <body>
-        <div id="contenedorTitulo"> <!-- contenedores que llevan mismo estilo -->
-            <h1>Home</h1>  <!--style = aplicar estilos CSS-->
-            <p>Hola! Esta es mi tienda en linea!</p> <!-- parrafos -->
-        </div>
+    <body>
+        <header id="encabezado">
+            <h1>Tienda en línea</h1>
+            <br>
+        </header>
+        <nav id="menu">
+            <a href="ejemplo8.html">Atrás</a>
+            <a href="index.html">Home</a>
+            <a href="ejemplo2.html">Adelante</a>
+        </nav>
 
-        <p class="parrafoSecundario notaImportante" style="text-align:left;">Lorem ipsum dolor sit amet consectetur adipiscing, elit proin porttitor malesuada ad tincidunt, vehicula dapibus fringilla nostra duis. Senectus interdum primis vivamus cubilia sagittis nunc netus pretium, curae montes aliquam nisl potenti nibh egestas morbi pharetra, litora venenatis vitae nullam id nascetur habitasse. Primis lobortis pellentesque curae ut euismod tortor nam class suspendisse, turpis sapien neque proin et viverra nulla potenti feugiat, tristique placerat tellus rutrum duis congue mollis fermentum.</p>
-        <p class="parrafoSecundario" style="text-align: center;">Sagittis faucibus arcu laoreet dignissim sociis non metus dictumst lectus sapien molestie ultrices, cras donec pellentesque sed quis litora ligula parturient mi diam pharetra. Quis erat at nibh malesuada dis etiam varius justo, vivamus aptent dictumst volutpat condimentum vestibulum pretium. Egestas non etiam velit potenti pulvinar gravida erat, curabitur scelerisque neque nisi commodo urna, cursus aenean natoque habitant platea nunc.</p>
-        <p style="text-align: right;">Sagittis faucibus arcu <span id="textoimportante">laoreet dignissim sociis non </span>metus dictumst lectus sapien <span>molestie ultrices, cras donec </span>pellentesque sed quis litora ligula parturient mi diam pharetra. Quis erat at nibh malesuada dis etiam varius justo, vivamus aptent dictumst volutpat condimentum vestibulum pretium. Egestas non etiam velit potenti pulvinar gravida erat, curabitur scelerisque neque nisi commodo urna, cursus aenean natoque habitant platea nunc.</p>
+        <aside id="barraLateral">
+            <h2>Productos más vendidos</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </aside> <!-- por si solo no es una barra lateral -->
 
-        <br><!-- salto de linea --> 
-        <!--para hacer comentarios = ctrl + shift + c-->
-        <p>Ultima linea</p>
+        <section id="contenido">
+            <h2>Articulos principales</h2>
+            <br>
+            <article>
+                <header>Asus Vivobook</header>
+                <p class="descripcion">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="https://dlcdnwebimgs.asus.com/gain/dcfda3d9-8130-4cf0-886f-84554d80cb5d/w800" width="200" />
+                    <figcaption>Imagen con fines ilustrativos</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Alienware ATD 900</header>
+                <p class="descripcion">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="https://www.huramobil.cz/fotocache/mid/ATD-M-AW3423DWF.jpg" width="200" />
+                    <figcaption>Más vendido</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Impresora 3D</header>
+                <p class="descripcion">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="https://m.media-amazon.com/images/I/71hnkA62lJL._AC_SL1500_.jpg" width="200" />
+                    <figcaption>Más económico</figcaption>
+                </figure>
+            </article>
+            <br>
+            <article>
+                <h2>Líneas de producto</h2>
+                <table border="0" style="border-collapse: collapse;">
+                    <thead id="encabezadoTabla">
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResumen">
+                        <tr>
+                            <td>1</td>
+                            <td>Teclados</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Monitores</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Headsets</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Baterías</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Cargadores</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Portátiles</td>
+                        </tr>
+                    </tbody>
+                </table>
 
+            </article>
+        </section>
+        <footer id="piePagina">
+            Derechos Reservados &COPY; 2024
+            <address style="display: inline;">San José</address> 
+            <address style="display: inline;">Tel 8888-7788</address>
+        </footer>
     </body>
+</body>
 
 
 </html>

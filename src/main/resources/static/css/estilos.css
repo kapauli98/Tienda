@@ -1,12 +1,17 @@
-
-/*UN ID*/
+/*
+UN ID
 #contenedorTitulo{
-    text-align: center;
+    text-align: center; centra contenido dentro del DIV
     color: mediumaquamarine;
+    border: 2px solid red;
+    width: 50%;
+    margin: 0 auto;centrar un div que no sea del 100% porque no hay necesidad
 
+    altura es mejor manejarla en px
+    height: 450px; e desarrolla mas adelante
 }
 
-/*UNA CLASE*/
+UNA CLASE
 .parrafoSecundario {
     font-size: 18px;
     color: chocolate;
@@ -20,33 +25,168 @@ h1, h2, h3 {
     color: blueviolet
 }
 
-/*SEMANA 3*/
-/*USO DE SPAN*/
+SEMANA 3
+USO DE SPAN
 
 p span{
     color:fuchsia;
 }
-/*PUEDE SER AUN MAS ESPECIFICO*/
-/*TODOS LOS PARRAFOS CON UN span y con texto importante*/
+PUEDE SER AUN MAS ESPECIFICO
+TODOS LOS PARRAFOS CON UN span y con texto importante
 p span#textoimportante{
     color:  blueviolet;
 }
-/*Span PUEDE SER AUN MAS COMPLICADO Y ESPECIFICO*/
-/*para que aplique tiene que ser un ancla, dentro de un boton, dentro de un div que tenga la clase review*/
+Span PUEDE SER AUN MAS COMPLICADO Y ESPECIFICO
+para que aplique tiene que ser un ancla, dentro de un boton, dentro de un div que tenga la clase review
 div.Review button a{
     font-size: 16px;
 }
 
-/*MEDIDAS*/
-/*COLORES*/
+MEDIDAS
+COLORES
 
-/*MODELO DE CAJAS*/
-/*COMO SE VEN LOS ELEMENTOS RESPECTO A OTROS ELEMENTOS Y RESPECTO A EL MISMO*/
+MODELO DE CAJAS
+COMO SE VEN LOS ELEMENTOS RESPECTO A OTROS ELEMENTOS Y RESPECTO A EL MISMO
 #contenedorTitulo{
     border: 2px solid;
-    /*PADDING ES EL ESPACIO ENTRE EL CONTENIDO Y EL BORDE*/
+    PADDING ES EL ESPACIO ENTRE EL CONTENIDO Y EL BORDE
     padding: 0px;
-    /*MARGEN DISTANCIA DE LO QUE ESTA FUERA CON EL BORDE*/
+    MARGEN DISTANCIA DE LO QUE ESTA FUERA CON EL BORDE
     margin-bottom: 100px;
     margin-top: 0px;
 }
+para background image usar el codigo que sale en la prsentacion de semana 3
+
+enlaces llamados pseudo clases
+permite dar estilo a ciertos comportamientos
+seguir ejemplo 7
+
+a{
+    border: 2px solid navy;
+    background-color: darkblue;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+}
+
+a:link{
+    color:orange;
+    font-size: 20px;
+}
+
+a:visited{
+    color:green;
+}
+
+a:hover{
+    background: green;
+    color: white;
+}
+
+a:active{ como se comporta al presionarlo
+    background: purple;
+    color:white;
+}
+
+NUEVOS SELECTORES
+Todos los parrafos con un atributo name con ese valor, aplicar este estilo
+p[name^=parr]{
+    font-size: 50px;
+}
+
+PAR E IMPAR
+trabajar numeros consecutivos
+Ejem todos los parrados donde el numero de hijo sea el dos*/
+
+#encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8%;
+    width: 100%;
+    background-color: #496D8D;
+    color: white;
+}
+
+/*#encabezado h1 {
+    display: inline;
+}*/
+
+#menu {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    height: 4%;
+    width: 100%;
+    background-color: cadetblue;
+    color: black;
+}
+
+#menu a:visited {
+    color: navy;
+}
+
+#menu a:hover {
+    background-color: green;
+    color: white;
+}
+
+#barraLateral {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    height: 81%;
+    width: 20%;
+    background-color: #8e27f6;
+    color: black;
+}
+
+#contenido {
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    height: 81%;
+    width: 80%;
+    background-color: honeydew;
+    color: black;
+    overflow: auto; /*para hacer scroll*/
+}
+
+#piePagina {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 7%;
+    width: 100%;
+    background-color: #87f29b;
+    color: black;
+    text-align: center;
+}
+ /*clases para poner estilos a las tablas dentro del articulo*/
+#encabezadoTabla {
+    font-size: 20px;
+    color: white;
+    background-color: cadetblue;
+}
+
+#tablaResumen tr {
+    font-size: 25px;
+}
+
+/*cualquier elemento llamado tablaResuemn, a sus tablerow en espacios impares poner este estilo*/
+#tablaResumen tr:nth-child(odd) { /*selector descendente*/
+    background-color: gold;
+}
+
+/*cualquier elemento llamado tablaResuemn, a sus tablerow en espacios pares poner este estilo*/
+
+#tablaResumen tr:nth-child(even) {
+    background-color: coral;
+}
+
+
+
+
+
+
