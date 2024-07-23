@@ -35,12 +35,14 @@ public class CategoriaController {
         return "/categoria/listado";
     }
 
-    
+    /*si quiero agregar un elemento nuevo, me redirige a una vista y en esa vista lleno los datos*/
     @GetMapping("/nuevo")
     public String categoriaNuevo(Categoria categoria) {
         return "/categoria/modifica";
     }
 
+    /*meotodo post= no se llega por un ancla, sino que se llega por un formulario*/
+    /*primer parametro es obj categ, pero no recibe el obejto sino los datos que calzan con los de la clase categoria*/
     @PostMapping("/guardar")
     public String categoriaGuardar(Categoria categoria,
             @RequestParam("imagenFile") MultipartFile imagenFile) {
@@ -56,12 +58,15 @@ public class CategoriaController {
         return "redirect:/categoria/listado";
     }
 
+    /*se usa get porque se usa un boton=ancla*/
     @GetMapping("/eliminar/{idCategoria}")
     public String categoriaEliminar(Categoria categoria) {
         categoriaService.delete(categoria);
         return "redirect:/categoria/listado";
     }
 
+    /*trae los datos y nos da la opcion de modificar con el model*/
+    /*muestra los campos llenos y deja modificarlos*/
     @GetMapping("/modificar/{idCategoria}")
     public String categoriaModificar(Categoria categoria, Model model) {
         categoria = categoriaService.getCategoria(categoria);
