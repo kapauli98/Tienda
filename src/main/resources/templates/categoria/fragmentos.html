@@ -15,7 +15,7 @@
                             type="button" 
                             class="btn btn-primary btn-block" 
                             data-bs-toggle="modal" 
-                            data-bs-target="#agregarca">
+                            data-bs-target="#agregarCategoria"> <!-- abre el modal utilizando el Id que se encuentra en fragemnto 2 -->
                             <i class="fas fa-plus"></i> [[#{capitulo.agregar}]]
                         </button>
                     </div>
@@ -25,7 +25,7 @@
 
         <!-- 2 Fragmento para agregar categoria, es la ventana modal -->
         <section th:fragment="agregarCategoria">
-            <div id="agregarcategoria" 
+            <div id="agregarCategoria" <!-- EL Id que se referenció arriba pertenece a este div, aqui se encuentra el formulario -->
                  class="modal fade" 
                  tabindex="-1" 
                  aria-labelledby="exampleModalLabel" 
@@ -36,6 +36,7 @@
                             <h5 class="modal-title">[[#{capitulo.agregar}]]</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div> 
+                        <!-- FORMULARIO DONDE SE PONEN LOS DATOS -->
                         <form th:action="@{/categoria/guardar}" th:object="${categoria}"
                               method="POST" class="was-validated" enctype="multipart/form-data">
                             <div class="modal-body">
@@ -82,7 +83,7 @@
                                     <tbody>
                                         <tr th:each="categoria, contador : ${categorias}">
                                             <td>[[${contador.count}]]</td>
-                                            <!--<td>[[${categoria.descripcion}]]</td>-->
+                                            <td>[[${categoria.descripcion}]]</td>
                                             <td th:text="${categoria.activo} ? 'Activa' : 'Inactiva'" />
                                             <td><a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
                                                    class="btn btn-danger">
@@ -102,7 +103,7 @@
                         <div class="card text-center bg-success text-white mb-3">
                             <div class="card-body">
                                 <h3>[[#{capitulo.total}]]</h3>
-                                <h4 class="fs-2"><i class="fas fa-users"></i> [[${totalcategorias}]]</h4>
+                                <h4 class="fs-2"><i class="fas fa-users"></i> [[${totalCategorias}]]</h4>
                             </div>
                         </div>
                     </div>
