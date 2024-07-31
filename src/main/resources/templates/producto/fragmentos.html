@@ -44,8 +44,8 @@
                             <!-- aqui empieza el cuerpo del formulario que veremos -->
                             <div class="modal-body"> 
                                 <div class="mb-3">
-                                    <label for="idCategoria">[[#{producto.capitulo}]]</label>
-                                    <select name="idCategoria" class="form-select">
+                                    <label for="categoria.idCategoria">[[#{producto.capitulo}]]</label>
+                                    <select name="categoria.idCategoria" class="form-select">
                                         <option th:each="item : ${categorias}"
                                                 th:value="${item.idCategoria}"
                                                 th:text="${item.descripcion}"></option>
@@ -112,7 +112,7 @@
                                         <tr th:each="producto, contador : ${productos}">
                                             <td>[[${contador.count}]]</td>
                                             <td>[[${producto.descripcion}]]</td>
-                                            <td>[[${producto.idCategoria}]]</td>
+                                            <td>[[${producto.categoria.descripcion}]]</td>
                                             <td>[[${producto.precio}]]</td>
                                             <td>[[${producto.existencias}]]</td>
                                             <td th:text="${producto.activo} ? 'Activa' : 'Inactiva'" />
@@ -166,9 +166,9 @@
                                             </div>
                                             <div class="card-body">
                                                 <div class="mb-3">
-                                                    <label for="idCategoria">[[#{producto.categoria}]]</label>
-                                                    <select name="idCategoria" class="form-select" 
-                                                            th:field="*{idCategoria}">
+                                                    <label for="categoria.idCategoria">[[#{producto.categoria}]]</label>
+                                                    <select name="categoria.idCategoria" class="form-select" 
+                                                            th:field="*{categoria.idCategoria}">
                                                         <option th:each="item : ${categorias}"
                                                                 th:value="${item.idCategoria}"
                                                                 th:text="${item.descripcion}"></option>

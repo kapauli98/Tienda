@@ -3,6 +3,7 @@ package com.tienda.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 /*automaticamente tener set y get*/
@@ -13,20 +14,27 @@ import java.io.Serializable;
 public class Categoria implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
-    @Id /*este es el PK de la tabla*/
-    @GeneratedValue(strategy = GenerationType.IDENTITY) /*cuando cree un objeto nuevo tiene que darle esta identidad*/
-    @Column(name="id_categoria")
+
+    @Id
+    /*este es el PK de la tabla*/
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /*cuando cree un objeto nuevo tiene que darle esta identidad*/
+    @Column(name = "id_categoria")
     private Long idCategoria;
     private String descripcion;
-    private String rutaImagen; /*hibernate lo transforma por si solo en ruta_imagen*/
+    private String rutaImagen;
+    /*hibernate lo transforma por si solo en ruta_imagen*/
     private boolean activo;
-    
-    public Categoria(){
-        
+
+    @OneToMany
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    List<Producto> productos; //es una lista, ya que una categoria puede tener muchos
+
+    public Categoria() {
+
     }
-    
-    public Categoria(String descripcion, String rutaImagen, boolean activo){
+
+    public Categoria(String descripcion, String rutaImagen, boolean activo) {
         this.descripcion = descripcion;
         this.rutaImagen = rutaImagen;
         this.activo = activo;
