@@ -49,4 +49,19 @@ public class ProductoServiceImpl implements ProductoService {
         return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
     }
 
+    public List<Producto> findByDescripcionContainingIgnoreCase(String texto) {
+        return productoDao.findByDescripcionContainingIgnoreCase(texto);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> metodoJPQL(double precioInf, double precioSup) {
+        return productoDao.metodoJPQL(precioInf, precioSup);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> metodoNativo(double precioInf, double precioSup) {
+        return productoDao.metodoNativo(precioInf, precioSup);
+    }
 }
